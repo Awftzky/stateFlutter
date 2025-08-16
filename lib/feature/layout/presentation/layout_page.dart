@@ -18,7 +18,7 @@ class LayoutPage extends StatelessWidget {
         .padding
         .top;
 
-    final myAppBar = AppBar(title: Text('AppBar'));
+    final myAppBar = AppBar(title: const Text('AppBar'));
     final heightBody = heightApp - paddingTop - myAppBar.preferredSize.height;
 
     return Scaffold(
@@ -48,7 +48,7 @@ class LayoutPage extends StatelessWidget {
 class MyContainer extends StatelessWidget {
   final double widthApp;
 
-  MyContainer(this.widthApp);
+  const MyContainer(this.widthApp);
 
   @override
   Widget build(BuildContext context) {

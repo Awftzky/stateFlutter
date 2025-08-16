@@ -16,7 +16,7 @@ class ProductGrid extends StatelessWidget {
         create: (context) => all_products[i], // Looping untuk semua data
         child: ProductItem(),
       ),
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
         childAspectRatio: 3 / 2,
         crossAxisSpacing: 10,

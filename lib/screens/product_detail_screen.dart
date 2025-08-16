@@ -47,28 +47,28 @@ class ProductDetailScreen extends StatelessWidget {
           height: MediaQuery.of(context).size.height * 0.3,
               child: Image.network('${product.imageUrl}' , fit: BoxFit.cover,)),
 
-          SizedBox(height: 15),
+          const SizedBox(height: 15),
 
-          Text('${product.title}' , style: TextStyle(fontSize: 40 , fontWeight: FontWeight.bold),),
+          Text('${product.title}' , style: const TextStyle(fontSize: 40 , fontWeight: FontWeight.bold),),
 
-          SizedBox(height: 15),
+          const SizedBox(height: 15),
 
-          Text('${product.description}' , style: TextStyle(fontSize: 25),),
+          Text('${product.description}' , style: const TextStyle(fontSize: 25),),
 
-          SizedBox(height: 15),
+          const SizedBox(height: 15),
 
-          Text('\$${product.price}' , style: TextStyle(fontSize: 25),),
+          Text('\$${product.price}' , style: const TextStyle(fontSize: 25),),
 
-          SizedBox(height: 15),
+          const SizedBox(height: 15),
           
           TextButton(
               onPressed: () {
                 Navigator.of(context).pushNamed(CartScreens.routeName);
-                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
                   content: Text('added to cart'),
                   duration: Duration(seconds: 2),));
                 cartDT.addCart(product.id, product.title, product.price);
-              }, child: Text('Add to cart'))
+              }, child: const Text('Add to cart'))
         ],
       ),
     );

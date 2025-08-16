@@ -3,8 +3,6 @@ import 'package:provider/provider.dart';
 import 'package:studyapp/providers/cart_provider.dart';
 import 'package:studyapp/screens/cart_screens.dart';
 import 'package:studyapp/widgets/product_grid.dart';
-import '../models/product.dart';
-import '../widgets/product_item.dart';
 import '../widgets/badge.dart'; // Pastikan path ini benar
 
 class ProductsOverviewScreen extends StatelessWidget {

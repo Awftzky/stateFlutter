@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:studyapp/models/product.dart';
-import '../models/cart_item.dart';
 import '../providers/cart_provider.dart';
 
 class CartScreens extends StatelessWidget {
@@ -15,11 +13,11 @@ class CartScreens extends StatelessWidget {
         child: Column(
           children: [
             Padding(
-              padding: EdgeInsets.all(20),
+              padding: const EdgeInsets.all(20),
               child: Card(
                 child: Text(
                   'Total harga ${cartDT.totalHarga}',
-                  style: TextStyle(fontSize: 30),
+                  style: const TextStyle(fontSize: 30),
                 ),
               ),
             ),

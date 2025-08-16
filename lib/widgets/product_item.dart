@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:studyapp/providers/all_product.dart';
 import 'package:studyapp/models/product.dart';
 import 'package:studyapp/providers/cart_provider.dart';
 import '../screens/product_detail_screen.dart';
@@ -32,8 +31,8 @@ class ProductItem extends StatelessWidget {
             leading: Consumer<Product>(
               builder: (context, productDT, child) => IconButton(
                 icon: (productDT.isFavorite)
-                    ? Icon(Icons.favorite)
-                    : Icon(Icons.favorite_border_outlined),
+                    ? const Icon(Icons.favorite)
+                    : const Icon(Icons.favorite_border_outlined),
                 color: Colors.amber,
                 onPressed: () {
                   productDT.statusFav();
@@ -45,12 +44,12 @@ class ProductItem extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
             trailing: IconButton(
-              icon: Icon(
+              icon: const Icon(
                 Icons.shopping_cart,
               ),
               onPressed: () {
-                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                    content: Text('added to cart'),
+                ScaffoldMessenger.of(context).showSnackBar( const SnackBar(
+                    content: const Text('added to cart'),
                 duration: Duration(seconds: 2),));
                 cartDT.addCart(productDT.id , productDT.title, productDT.price);
               },
